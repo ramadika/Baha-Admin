@@ -1,0 +1,12 @@
+.product {
+  font-family: "Poppins", sans-serif;
+  margin-top: 20px;
+}
+
+.product h1 {
+  margin-bottom: -10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #343a40;
+  font-size: 26pt;
+}

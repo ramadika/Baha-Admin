@@ -13,6 +13,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import Login from 'components/Login-Page'
 import BaseLayout from 'components/Base-Layout'
 import Home from 'components/Home-Page'
+import Product from 'components/Product-Page'
 
 ReactDOM.render(
   <Router>
@@ -21,6 +22,7 @@ ReactDOM.render(
         <Route exact path="/" component={Login} />
         <BaseLayout>
           <Route path="/home" component={Home} />
+          <Route path="/product" component={Product} />
         </BaseLayout>
       </DataProvider>
     </Switch>

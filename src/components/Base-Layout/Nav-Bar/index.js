@@ -2,6 +2,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import {AiFillPlusCircle} from 'react-icons/ai'
+import {BiServer} from 'react-icons/bi'
 import {HiOutlineCash} from 'react-icons/hi'
 import {FiInfo} from 'react-icons/fi'
 import {RiAccountCircleLine,RiContactsBookLine} from 'react-icons/ri'
@@ -18,7 +19,8 @@ export default function index() {
                 <img src={img1} alt="img1" className="text-center"></img>
                 <h2 className="text-center">Hello! James Stanford Jr.</h2>
                 <button className="closebtn-nav btn" onClick={closeNav}>&times;</button>
-                <NavLink className="btn btn-outline-danger mb-3" to="/update">Update  <AiFillPlusCircle/></NavLink>
+                <NavLink className="btn btn-outline-danger mb-3" to="/product">Update  <AiFillPlusCircle/></NavLink>
+                <NavLink to="/home"><BiServer /> Overview</NavLink>
                 <NavLink to="/order"><HiOutlineCash /> Order List</NavLink>
                 <NavLink to="/user"><MdSupervisorAccount /> User List</NavLink>
                 <NavLink to="/admin"><RiAccountCircleLine /> Admin List</NavLink>
