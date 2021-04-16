@@ -1,13 +1,25 @@
+// Dependencies
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
+import { DataProvider } from 'components/Context'
+
+// Internals
+import './index.css';
+import 'bootstrap/dist/css/bootstrap.css'
+
+// Apps
+import Login from 'components/Login-Page'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router>
+    <Switch>
+      <DataProvider>
+        <Route exact path="/" component={Login} />
+      </DataProvider>
+    </Switch>
+  </Router>,
   document.getElementById('root')
 );
 

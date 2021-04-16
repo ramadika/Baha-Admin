@@ -1,0 +1,19 @@
+.login {
+  background-image: linear-gradient(grey, grey),
+    url(/src/assets/images/ashim-d-silva-ZmgJiztRHXE-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: 250%;
+  background-position: 50% 50%;
+  background-blend-mode: multiply;
+  color: #dcdde1;
+  margin-top: 50px;
+  font-family: "Poppins", sans-serif;
+}
+
+.login .row {
+    width: fit-content;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 1px solid #dcdde1;
+}
