@@ -11,12 +11,17 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 // Apps
 import Login from 'components/Login-Page'
+import BaseLayout from 'components/Base-Layout'
+import Home from 'components/Home-Page'
 
 ReactDOM.render(
   <Router>
     <Switch>
       <DataProvider>
         <Route exact path="/" component={Login} />
+        <BaseLayout>
+          <Route path="/home" component={Home} />
+        </BaseLayout>
       </DataProvider>
     </Switch>
   </Router>,

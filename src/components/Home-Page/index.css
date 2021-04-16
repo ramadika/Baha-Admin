@@ -1,0 +1,71 @@
+.home {
+  font-family: "Poppins", sans-serif;
+  margin-top: 20px;
+}
+
+.home h1 {
+  margin-bottom: -10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #343a40;
+  font-size: 26pt;
+  /* background: url(/src/assets/images/nikola-duza-TSh8D8KutWU-unsplash.jpg) no-repeat;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     background-position: 50% 50%; */
+}
+
+.home hr {
+  margin-bottom: 35px;
+}
+
+.home .row .a-home,
+.home .row .b-home,
+.home .row .c-home {
+  margin-right: 10px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #dcdde1;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: 120%;
+  background-position: 50% 45%;
+  background-blend-mode: multiply;
+}
+
+.home .row .a-home {
+  background-image: linear-gradient(grey, grey),
+    url(/src/assets/images/freestocks-_3Q3tsJ01nc-unsplash.jpg);
+}
+
+.home .row .b-home {
+  background-image: linear-gradient(grey, grey),
+    url(/src/assets/images/imelda-p-ER1gHMTYY-unsplash.jpg);
+}
+
+.home .row .c-home {
+  background-image: linear-gradient(grey, grey),
+    url(/src/assets/images/jeremy-chen-c0AzTrQ8EO0-unsplash.jpg);
+}
+
+.home .row .col h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 11pt;
+  text-transform: uppercase;
+  color: #dcdde1;
+}
+
+.home .row .col h5 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 800;
+  font-size: 34pt;
+  color: #abe4cd;
+}
+
+.home .row .order-home {
+  border-radius: 10px;
+  margin-bottom: 55px;
+  padding: 20px;
+  border: 1px solid #dcdde1;
+}
