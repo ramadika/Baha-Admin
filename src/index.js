@@ -14,18 +14,26 @@ import Login from 'components/Login-Page'
 import BaseLayout from 'components/Base-Layout'
 import Home from 'components/Home-Page'
 import Product from 'components/Product-Page'
+import AddProduct from 'components/Product-Page/Form-Page'
+import OrderList from 'components/ListOrder-Page'
+import UserList from 'components/ListUser-Page'
+import AdminList from 'components/ListAdmin-Page'
 
 ReactDOM.render(
   <Router>
-    <Switch>
-      <DataProvider>
-        <Route exact path="/" component={Login} />
-        <BaseLayout>
-          <Route path="/home" component={Home} />
-          <Route path="/product" component={Product} />
-        </BaseLayout>
-      </DataProvider>
-    </Switch>
+    <DataProvider>
+      <Switch>
+          <Route exact path="/" component={Login} />
+          <BaseLayout>
+            <Route path="/home" component={Home} />
+            <Route path="/product" component={Product} />
+            <Route path="/addproduct" component={AddProduct} />
+            <Route path="/order" component={OrderList} />
+            <Route path="/user" component={UserList} />
+            <Route path="/admin" component={AdminList} />
+          </BaseLayout>
+      </Switch>
+    </DataProvider>
   </Router>,
   document.getElementById('root')
 );

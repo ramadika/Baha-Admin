@@ -1,0 +1,32 @@
+.orderlist {
+  font-family: "Poppins", sans-serif;
+  margin-top: 20px;
+}
+
+.orderlist h1 {
+  margin-bottom: -10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #343a40;
+  font-size: 26pt;
+}
+
+.orderlist .row .table thead {
+  font-size: 11pt;
+  text-transform: uppercase;
+  /* background-color: #00834e; */
+  color: #ffffff;
+  background-image: linear-gradient(grey, grey),
+    url(/src/assets/images/jezael-melgoza-layMbSJ3YOE-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: 220%;
+  background-position: 50% 50%;
+  background-blend-mode: multiply;
+}
+
+.orderlist .row .table tbody th {
+  font-size: 11pt;
+  text-transform: none;
+  background-color: white;
+  color: #343a40;
+}

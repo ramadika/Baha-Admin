@@ -70,7 +70,7 @@ export default class index extends Component {
                             </h3>
                         </div>
                         <div className="col">
-                            <h6><img src={img1} alt="img"></img><b>Cipta</b>Things.</h6>
+                            <h6><img src={img1} alt="img"></img><b>Arn</b>awa.</h6>
                             <h1 className="mt-5"><b>Login</b></h1>
                             <h2 className="mt-4">Login to your account</h2>
                             <h4>Thank you for get back to create a change. Let's access the app</h4>
