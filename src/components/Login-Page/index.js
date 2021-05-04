@@ -5,7 +5,7 @@ import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 // Internals
 import 'components/Login-Page/index.css'
-import img1 from 'assets/images/Cipta_Things-removebg.png'
+import img1 from 'assets/images/Arnawa-removebg-preview.png'
 import { DataContext } from 'components/Context'
 
 export default class index extends Component {

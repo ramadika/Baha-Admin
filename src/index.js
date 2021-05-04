@@ -14,6 +14,7 @@ import Login from 'components/Login-Page'
 import BaseLayout from 'components/Base-Layout'
 import Home from 'components/Home-Page'
 import Product from 'components/Product-Page'
+import Men from 'components/Product-Page/ListMen-Page'
 import AddProduct from 'components/Product-Page/Form-Page'
 import OrderList from 'components/ListOrder-Page'
 import UserList from 'components/ListUser-Page'
@@ -27,6 +28,7 @@ ReactDOM.render(
           <BaseLayout>
             <Route path="/home" component={Home} />
             <Route path="/product" component={Product} />
+            <Route path="/men" component={Men} />
             <Route path="/addproduct" component={AddProduct} />
             <Route path="/order" component={OrderList} />
             <Route path="/user" component={UserList} />

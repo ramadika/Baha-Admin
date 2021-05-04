@@ -87,9 +87,15 @@ export default class index extends Component {
                             </div>
                             <div className="row justify-content-center mt-3">
                                 <div className="col">
-                                    <h3><b>Color</b></h3>
-                                    <h4>Color of your product</h4>
-                                    <input type="text" name="color" value={this.context.color} ref={(val) => this.color = val} className="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></input>
+                                    <h3><b>Category</b></h3>
+                                    <h4>Category of your product</h4>
+                                    {/* <input type="text" name="color" value={this.context.color} ref={(val) => this.color = val} className="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></input> */}
+                                    <select ref={(val) => (this.access = val)} className="col form-control text-center" required>
+                                        <option name="" value="">Choose</option>
+                                        <option value="User">Men</option>
+                                        <option value="Admin">Women</option>
+                                        <option value="Superuser">Accessories</option>
+                                    </select>
                                 </div>
                                 <div className="col">
                                     <h3><b>Price <span style={{color:'red'}}>*</span></b></h3>

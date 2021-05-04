@@ -1,0 +1,42 @@
+.men {
+  font-family: "Poppins", sans-serif;
+  margin-top: 20px;
+}
+
+.men h1 {
+  margin-bottom: -10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #343a40;
+  font-size: 26pt;
+}
+
+.men .row .table thead {
+  font-size: 11pt;
+  text-transform: uppercase;
+  /* background-color: #00834e; */
+  color: #ffffff;
+  background-image: linear-gradient(grey, grey),
+    url(/src/assets/images/parker-burchfield-tvG4WvjgsEY-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: 220%;
+  background-position: 50% 50%;
+  background-blend-mode: multiply;
+}
+
+.men .row .table tbody th {
+  vertical-align: middle;
+  font-size: 11pt;
+  text-transform: none;
+  background-color: white;
+  color: #343a40;
+}
+
+.men .row .table img {
+  width: 100px;
+  height: auto;
+}
+
+.men .row .table td {
+  vertical-align: middle;
+}
