@@ -1,5 +1,6 @@
 // Dependencies
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 // import Axios from 'axios';
 // import swal from "sweetalert";
 // Internals
@@ -107,7 +108,10 @@ export default class index extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <input type="submit" value="Submit"  className="form-control my-4"></input>
+                            <div className="row d-flex justify-content-center">
+                                <NavLink className="btn align-self-center" to="/product">Back</NavLink>
+                                <input type="submit" value="Submit"  className="form-control my-4"></input>
+                            </div>
                         </form>
                     </div>
                 </div>
