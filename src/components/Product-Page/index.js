@@ -39,11 +39,11 @@ export default class index extends Component {
                             <FaTshirt size={25} className="mb-2 mr-2" />
                             <h3>Men</h3>
                         </NavLink>
-                        <NavLink to="/" className="col-6 col-sm-4 d-flex align-items-center justify-content-center category-product" id="e-product">
+                        <NavLink to="/women" className="col-6 col-sm-4 d-flex align-items-center justify-content-center category-product" id="e-product">
                             <ImWoman size={30} className="mb-2 mr-2" />
                             <h3>Women</h3>
                         </NavLink>
-                        <NavLink to="/" className="col-6 col-sm-4 d-flex align-items-center justify-content-center category-product" id="f-product">
+                        <NavLink to="/accessories" className="col-6 col-sm-4 d-flex align-items-center justify-content-center category-product" id="f-product">
                             <GoWatch size={25} className="mb-2 mr-2" />
                             <h3>Accessories</h3>
                         </NavLink>
