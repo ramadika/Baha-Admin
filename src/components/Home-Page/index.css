@@ -1,6 +1,6 @@
 .home {
   font-family: "Poppins", sans-serif;
-  margin-top: 20px;
+  margin-top: 75px;
 }
 
 /* .home img {
@@ -39,6 +39,7 @@
 .home .row .b-home,
 .home .row .c-home {
   margin-right: 10px;
+  margin-bottom: 75px;
   padding: 20px;
   text-align: center;
   border: 1px solid #dcdde1;
@@ -84,4 +85,8 @@
   margin-bottom: 55px;
   padding: 20px;
   border: 1px solid #dcdde1;
+}
+
+.home .row #pie-categories{
+  margin-left: 50px;
 }

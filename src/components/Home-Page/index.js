@@ -1,13 +1,45 @@
 // Dependencies
 import React, { Component } from 'react'
 // import { NavLink } from 'react-router-dom'
-import {GoPrimitiveDot} from 'react-icons/go'
+import { GoPrimitiveDot } from 'react-icons/go'
 import Header from 'components/Base-Layout/Header'
+import Chart1 from 'components/Home-Page/Chart1'
+import Chart2 from 'components/Home-Page/Chart2'
+import Chart3 from 'components/Home-Page/Chart3'
 // Internals
 import 'components/Home-Page/index.css'
 // import img1 from 'assets/images/Arnawa-removebg-preview.png'
 
 export default class index extends Component {
+    constructor(props) {
+      super(props);
+
+      this.state = {
+      
+        series: [44, 55, 13],
+        options: {
+          chart: {
+            width: 480,
+            type: 'pie',
+          },
+          labels: ['Men', 'Women', 'Accessories'],
+          responsive: [{
+            breakpoint: 480,
+            options: {
+              chart: {
+                width: 200
+              },
+              legend: {
+                position: 'bottom'
+              }
+            }
+          }]
+        },
+      
+      
+      };
+    }
+
     render() {
         return (
             <div className="home">
@@ -31,7 +63,7 @@ export default class index extends Component {
                             <h5>8</h5>
                         </div>
                     </div>
-                    <div className="row mt-5">
+                    <div className="row">
                         <div className="col order-home">
                             <div className="table-responsive">
                                 <table id="example" className="table table-borderless">
@@ -115,7 +147,20 @@ export default class index extends Component {
                                 </table>
                             </div>
                         </div>
-                        <div className="col"></div>
+                        <div className="col align-self-center" id="pie-categories">
+                            <h3>Sales by Categories</h3>
+                            <Chart1 />
+                        </div>
+                    </div>
+                    <div className="row mb-5">
+                        <div className="col">
+                            <h3>Product Sales by Month</h3>
+                            <Chart2 />
+                        </div>
+                        <div className="col">
+                            <h3>Product Sales by Region</h3>
+                            <Chart3 />
+                        </div>
                     </div>
                 </div>
             </div>
