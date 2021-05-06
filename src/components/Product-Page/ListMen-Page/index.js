@@ -5,6 +5,7 @@ import 'jquery/dist/jquery.min.js';
 import "datatables.net-dt/js/dataTables.dataTables"
 import "datatables.net-dt/css/jquery.dataTables.min.css"
 import $ from 'jquery'; 
+import Header from 'components/Base-Layout/Header'
 // Internals
 import 'components/Product-Page/ListMen-Page/index.css'
 import img1 from 'assets/images/maude-frederique-lavoie-EDSTj4kCUcw-unsplash.jpg'
@@ -34,7 +35,7 @@ export default class index extends Component {
         return (
             <div className="men">
                 <div className="container">
-                    <h1>Men Product</h1>
+                    <Header title="Men Product" />
                     <hr />
                     <div className="row mt-4 mb-5 text-center">
                         <div className="table-responsive">

@@ -5,6 +5,7 @@ import 'jquery/dist/jquery.min.js';
 import "datatables.net-dt/js/dataTables.dataTables"
 import "datatables.net-dt/css/jquery.dataTables.min.css"
 import $ from 'jquery'; 
+import Header from 'components/Base-Layout/Header'
 // Internals
 import 'components/ListAdmin-Page/index.css'
 import { DataContext } from 'components/Context'
@@ -29,7 +30,7 @@ export default class index extends Component {
         return (
             <div className="adminlist">
                 <div className="container">
-                    <h1>Admin List</h1>
+                    <Header title="Admin List" tag="A list of all your administrator and the roles they have." />
                     <hr />
                     <div className="row mt-4 mb-5 text-center">
                         <div className="table-responsive">

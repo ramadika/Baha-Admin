@@ -6,6 +6,7 @@ import { HiDuplicate } from 'react-icons/hi'
 import { FaRegMoneyBillAlt, FaTshirt } from 'react-icons/fa'
 import { ImWoman } from 'react-icons/im'
 import { GoWatch } from 'react-icons/go'
+import Header from 'components/Base-Layout/Header'
 // Internals
 import 'components/Product-Page/index.css'
 
@@ -14,7 +15,7 @@ export default class index extends Component {
         return (
             <div className="product">
                 <div className="container">
-                    <h1>Product</h1>
+                    <Header title="Product" tag="Make changes with the products you have." />
                     <hr />
                     <div className="row text-center">
                         <div className="col info-product" id="a-product">

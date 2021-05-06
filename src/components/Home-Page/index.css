@@ -3,17 +3,33 @@
   margin-top: 20px;
 }
 
+/* .home img {
+  width: 30px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.home h6 {
+  font-size: 7pt;
+  color: #00472b;
+  font-style: italic;
+}
+
 .home h1 {
-  margin-bottom: -10px;
   font-weight: 900;
   text-transform: uppercase;
   color: #343a40;
   font-size: 26pt;
-  /* background: url(/src/assets/images/nikola-duza-TSh8D8KutWU-unsplash.jpg) no-repeat;
+  background: url(/src/assets/images/nikola-duza-TSh8D8KutWU-unsplash.jpg) no-repeat;
      -webkit-background-clip: text;
      -webkit-text-fill-color: transparent;
-     background-position: 50% 50%; */
+     background-position: 50% 50%;
 }
+
+.home h5 {
+  font-size: 8pt;
+  color: #dcdde1;
+} */
 
 .home hr {
   margin-bottom: 35px;

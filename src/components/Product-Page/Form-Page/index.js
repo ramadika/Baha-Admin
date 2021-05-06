@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 // import Axios from 'axios';
 // import swal from "sweetalert";
+import Header from 'components/Base-Layout/Header'
 // Internals
 import 'components/Product-Page/Form-Page/index.css'
 import { DataContext } from 'components/Context'
@@ -65,8 +66,7 @@ export default class index extends Component {
         return (
             <div className="form-product">
                 <div className="container">
-                    <h1>Add Product</h1>
-                    <h6>Add product so that people can buy it</h6>
+                    <Header title="Add Product" tag="Add product so that people can buy it." />
                     <hr />
                     <div className="row justify-content-center">
                         <form onSubmit={this.postData}>

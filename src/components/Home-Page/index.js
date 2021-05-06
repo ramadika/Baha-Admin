@@ -2,15 +2,20 @@
 import React, { Component } from 'react'
 // import { NavLink } from 'react-router-dom'
 import {GoPrimitiveDot} from 'react-icons/go'
+import Header from 'components/Base-Layout/Header'
 // Internals
 import 'components/Home-Page/index.css'
+// import img1 from 'assets/images/Arnawa-removebg-preview.png'
 
 export default class index extends Component {
     render() {
         return (
             <div className="home">
                 <div className="container">
+                    {/* <h6><img src={img1} alt="img"></img><b>Arn</b>awa.</h6>
                     <h1>Overview</h1>
+                    <h5>An overview of your interesting sales journey.</h5> */}
+                    <Header title="Overview" tag="An overview of your interesting sales journey." />
                     <hr />
                     <div className="row text-center">
                         <div className="col a-home">
