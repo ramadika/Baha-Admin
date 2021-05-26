@@ -38,7 +38,7 @@ export default class index extends Component {
                                 <thead>
                                     <tr>
                                         <th>Order ID</th>
-                                        <th>Prices</th>
+                                        <th>Price</th>
                                         <th>Status</th>
                                         <th>Detail</th>
                                     </tr>

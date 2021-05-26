@@ -1,0 +1,42 @@
+.orderDetail {
+  font-family: "Poppins", sans-serif;
+  margin-top: 75px;
+}
+
+.orderDetail h3 {
+  font-size: 12pt;
+  margin-top: 15px;
+  color: #343a40;
+  white-space: nowrap;
+}
+
+.orderDetail h4 {
+  font-size: 10pt;
+  margin-top: 17px;
+  color: #343a40;
+}
+
+.orderDetail .row .table thead {
+  font-size: 11pt;
+  text-transform: uppercase;
+  /* background-color: #00834e; */
+  color: #ffffff;
+  background-image: linear-gradient(grey, grey),
+    url(/src/assets/images/maarten-van-den-heuvel--WWFGrfm7qk-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: 220%;
+  background-position: 50% 50%;
+  background-blend-mode: multiply;
+}
+
+.orderDetail .row .table tbody th {
+  font-size: 11pt;
+  text-transform: none;
+  background-color: white;
+  color: #343a40;
+}
+
+.orderDetail h5 {
+    font-size: 14pt;
+    color: #343a40;
+}

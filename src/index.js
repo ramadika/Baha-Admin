@@ -19,6 +19,7 @@ import Women from 'components/Product-Page/ListWomen-Page'
 import Accessories from 'components/Product-Page/ListAccessories-Page'
 import AddProduct from 'components/Product-Page/Form-Page'
 import OrderList from 'components/ListOrder-Page'
+import OrderDetail from 'components/DetailOrder-Page'
 import UserList from 'components/ListUser-Page'
 import AdminList from 'components/ListAdmin-Page'
 
@@ -35,6 +36,7 @@ ReactDOM.render(
             <Route path="/accessories" component={Accessories} />
             <Route path="/addproduct" component={AddProduct} />
             <Route path="/order" component={OrderList} />
+            <Route path="/dOrder" component={OrderDetail} />
             <Route path="/user" component={UserList} />
             <Route path="/admin" component={AdminList} />
           </BaseLayout>
