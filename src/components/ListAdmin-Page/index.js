@@ -1,6 +1,5 @@
 // Dependencies
 import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom'
 import 'jquery/dist/jquery.min.js';
 import "datatables.net-dt/js/dataTables.dataTables"
 import "datatables.net-dt/css/jquery.dataTables.min.css"
@@ -40,7 +39,7 @@ export default class index extends Component {
                                         <th>Admin ID</th>
                                         <th>Name</th>
                                         <th>Status</th>
-                                        <th>Detail</th>
+                                        <th>Contact</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -48,31 +47,31 @@ export default class index extends Component {
                                         <th>AD-123</th>
                                         <td>Dred</td>
                                         <td>Owner</td>
-                                        <td><NavLink className="btn btn-outline-info" to="/dOrder">Detail</NavLink></td>
+                                        <td>+021 445 67</td>
                                     </tr>
                                     <tr>
                                         <th>AD-456</th>
                                         <td>Ryot</td>
                                         <td>Administrator</td>
-                                        <td><NavLink className="btn btn-outline-info" to="/dOrder">Detail</NavLink></td>
+                                        <td>+021 445 67</td>
                                     </tr>
                                     <tr>
                                         <th>AD-126</th>
                                         <td>Buffy</td>
                                         <td>Staff Purchasing</td>
-                                        <td><NavLink className="btn btn-outline-info" to="/dOrder">Detail</NavLink></td>
+                                        <td>+021 445 67</td>
                                     </tr>
                                     <tr>
                                         <th>AD-153</th>
                                         <td>Vacx</td>
                                         <td>Staff Finance</td>
-                                        <td><NavLink className="btn btn-outline-info" to="/dOrder">Detail</NavLink></td>
+                                        <td>+021 445 67</td>
                                     </tr>
                                     <tr>
                                         <th>AD-623</th>
                                         <td>Luyt</td>
                                         <td>Staff Production</td>
-                                        <td><NavLink className="btn btn-outline-info" to="/dOrder">Detail</NavLink></td>
+                                        <td>+021 445 67</td>
                                     </tr>
                                 </tbody>
                             </table>

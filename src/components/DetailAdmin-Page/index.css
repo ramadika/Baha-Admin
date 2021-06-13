@@ -1,0 +1,38 @@
+.adminDetail {
+  font-family: "Poppins", sans-serif;
+  margin-top: 75px;
+}
+
+.adminDetail h3 {
+  font-size: 12pt;
+  margin-top: 15px;
+  color: #343a40;
+  white-space: nowrap;
+}
+
+.adminDetail h4 {
+  font-size: 10pt;
+  margin-top: 17px;
+  color: #343a40;
+  white-space: nowrap;
+}
+
+.adminDetail .row .table thead {
+  font-size: 11pt;
+  text-transform: uppercase;
+  /* background-color: #00834e; */
+  color: #ffffff;
+  background-image: linear-gradient(grey, grey),
+    url(/src/assets/images/pexels-photo-669610.jpeg);
+  background-repeat: no-repeat;
+  background-size: 220%;
+  background-position: 50% 50%;
+  background-blend-mode: multiply;
+}
+
+.adminDetail .row .table tbody th {
+  font-size: 11pt;
+  text-transform: none;
+  background-color: white;
+  color: #343a40;
+}

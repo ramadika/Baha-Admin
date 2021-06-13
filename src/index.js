@@ -21,7 +21,9 @@ import AddProduct from 'components/Product-Page/Form-Page'
 import OrderList from 'components/ListOrder-Page'
 import OrderDetail from 'components/DetailOrder-Page'
 import UserList from 'components/ListUser-Page'
+import UserDetail from 'components/DetailUser-Page'
 import AdminList from 'components/ListAdmin-Page'
+import AdminDetail from 'components/DetailAdmin-Page'
 
 ReactDOM.render(
   <Router>
@@ -38,7 +40,9 @@ ReactDOM.render(
             <Route path="/order" component={OrderList} />
             <Route path="/dOrder" component={OrderDetail} />
             <Route path="/user" component={UserList} />
+            <Route path="/dUser" component={UserDetail} />
             <Route path="/admin" component={AdminList} />
+            <Route path="/dAdmin" component={AdminDetail} />
           </BaseLayout>
       </Switch>
     </DataProvider>
