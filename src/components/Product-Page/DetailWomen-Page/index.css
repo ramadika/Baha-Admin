@@ -1,0 +1,48 @@
+.womenDetail {
+  font-family: "Poppins", sans-serif;
+  margin-top: 75px;
+}
+
+.womenDetail h3 {
+  font-size: 12pt;
+  margin-top: 15px;
+  color: #343a40;
+  white-space: nowrap;
+}
+
+.womenDetail h4 {
+  font-size: 10pt;
+  margin-top: 17px;
+  color: #343a40;
+  white-space: nowrap;
+}
+
+.womenDetail .row .table thead {
+  font-size: 11pt;
+  text-transform: uppercase;
+  /* background-color: #00834e; */
+  color: #ffffff;
+  background-image: linear-gradient(grey, grey),
+    url(/src/assets/images/markus-spiske-GVF30JP2nIg-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: 220%;
+  background-position: 50% 50%;
+  background-blend-mode: multiply;
+}
+
+.womenDetail .row .table tbody th {
+  vertical-align: middle;
+  font-size: 11pt;
+  text-transform: none;
+  background-color: white;
+  color: #343a40;
+}
+
+.womenDetail .row .table img {
+  width: 100px;
+  height: auto;
+}
+
+.womenDetail .row .table td {
+  vertical-align: middle;
+}

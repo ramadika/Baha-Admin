@@ -55,35 +55,35 @@ export default class index extends Component {
                                         <th>PWM-123</th>
                                         <td>Dred</td>
                                         <td>1</td>
-                                        <td><NavLink className="btn btn-outline-info" to="/dOrder">Detail</NavLink></td>
+                                        <td><NavLink className="btn btn-outline-info" to="/dWomen">Detail</NavLink></td>
                                     </tr>
                                     <tr>
                                         <th><img src={img2} alt="img"></img></th>
                                         <th>PWM-456</th>
                                         <td>Ryot</td>
                                         <td>2</td>
-                                        <td><NavLink className="btn btn-outline-info" to="/dOrder">Detail</NavLink></td>
+                                        <td><NavLink className="btn btn-outline-info" to="/dWomen">Detail</NavLink></td>
                                     </tr>
                                     <tr>
                                         <th><img src={img3} alt="img"></img></th>
                                         <th>PWM-126</th>
                                         <td>Buffy</td>
                                         <td>1</td>
-                                        <td><NavLink className="btn btn-outline-info" to="/dOrder">Detail</NavLink></td>
+                                        <td><NavLink className="btn btn-outline-info" to="/dWomen">Detail</NavLink></td>
                                     </tr>
                                     <tr>
                                         <th><img src={img4} alt="img"></img></th>
                                         <th>PWM-153</th>
                                         <td>Vacx</td>
                                         <td>3</td>
-                                        <td><NavLink className="btn btn-outline-info" to="/dOrder">Detail</NavLink></td>
+                                        <td><NavLink className="btn btn-outline-info" to="/dWomen">Detail</NavLink></td>
                                     </tr>
                                     <tr>
                                         <th><img src={img5} alt="img"></img></th>
                                         <th>PWM-623</th>
                                         <td>Luyt</td>
                                         <td>5</td>
-                                        <td><NavLink className="btn btn-outline-info" to="/dOrder">Detail</NavLink></td>
+                                        <td><NavLink className="btn btn-outline-info" to="/dWomen">Detail</NavLink></td>
                                     </tr>
                                 </tbody>
                             </table>

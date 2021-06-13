@@ -15,8 +15,11 @@ import BaseLayout from 'components/Base-Layout'
 import Home from 'components/Home-Page'
 import Product from 'components/Product-Page'
 import Men from 'components/Product-Page/ListMen-Page'
+import MenDetail from 'components/Product-Page/DetailMen-Page'
 import Women from 'components/Product-Page/ListWomen-Page'
+import WomenDetail from 'components/Product-Page/DetailWomen-Page'
 import Accessories from 'components/Product-Page/ListAccessories-Page'
+import AccessoriesDetail from 'components/Product-Page/DetailAccessories-Page'
 import AddProduct from 'components/Product-Page/Form-Page'
 import OrderList from 'components/ListOrder-Page'
 import OrderDetail from 'components/DetailOrder-Page'
@@ -34,8 +37,11 @@ ReactDOM.render(
             <Route path="/home" component={Home} />
             <Route path="/product" component={Product} />
             <Route path="/men" component={Men} />
+            <Route path="/dMen" component={MenDetail} />
             <Route path="/women" component={Women} />
+            <Route path="/dWomen" component={WomenDetail} />
             <Route path="/accessories" component={Accessories} />
+            <Route path="/dAccessories" component={AccessoriesDetail} />
             <Route path="/addproduct" component={AddProduct} />
             <Route path="/order" component={OrderList} />
             <Route path="/dOrder" component={OrderDetail} />
