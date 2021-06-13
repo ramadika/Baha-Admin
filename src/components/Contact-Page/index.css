@@ -1,0 +1,24 @@
+.contact {
+  font-family: "Poppins", sans-serif;
+  margin-top: 75px;
+}
+
+.contact h2 {
+  font-size: 17pt;
+  font-weight: 900;
+}
+
+.contact h5 {
+  font-size: 11pt;
+  font-weight: 200;
+}
+
+.contact a {
+  font-size: 10pt;
+}
+
+.icon-contact {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #ff7979;
+}

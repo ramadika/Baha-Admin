@@ -27,6 +27,8 @@ import UserList from 'components/ListUser-Page'
 import UserDetail from 'components/DetailUser-Page'
 import AdminList from 'components/ListAdmin-Page'
 import AdminDetail from 'components/DetailAdmin-Page'
+import About from 'components/About-Page'
+import Contact from 'components/Contact-Page'
 
 ReactDOM.render(
   <Router>
@@ -49,6 +51,8 @@ ReactDOM.render(
             <Route path="/dUser" component={UserDetail} />
             <Route path="/admin" component={AdminList} />
             <Route path="/dAdmin" component={AdminDetail} />
+            <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} />
           </BaseLayout>
       </Switch>
     </DataProvider>
