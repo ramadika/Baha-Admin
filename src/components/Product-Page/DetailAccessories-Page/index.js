@@ -28,6 +28,7 @@ export default class index extends Component {
                             <div className="col">
                                 <h3><b>Product ID</b></h3>
                                 <h3><b>Name</b></h3>
+                                <h3><b>Category</b></h3>
                                 <h3><b>Qty.</b></h3>
                                 <h3><b>Price</b></h3>
                                 <h3><b>Color</b></h3>
@@ -35,6 +36,7 @@ export default class index extends Component {
                             <div className="col align-self-center">
                                 <h4>PM-123</h4>
                                 <h4>Ryot</h4>
+                                <h4>Accesories</h4>
                                 <h4>1</h4>
                                 <h4>10000</h4>
                                 <h4>Brown</h4>

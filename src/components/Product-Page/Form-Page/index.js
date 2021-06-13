@@ -80,9 +80,9 @@ export default class index extends Component {
                                     <input type="text" name="nickName" value={this.context.nickname} ref={(val) => this.nickName = val} className="form-control" required></input>
                                 </div>
                                 <div className="col">
-                                    <h3><b>Full Name <span style={{color:'red'}}>*</span></b></h3>
-                                    <h4>Visible to other members</h4>
-                                    <input type="text" name="fullName" value={this.context.fullname} ref={(val) => this.fullName = val} className="form-control" required></input>
+                                    <h3><b>Color <span style={{color:'red'}}>*</span></b></h3>
+                                    <h4>Visible to customers</h4>
+                                    <input type="text" name="color" value={this.context.color} ref={(val) => this.color = val} className="form-control" required></input>
                                 </div>
                             </div>
                             <div className="row justify-content-center mt-3">
@@ -101,6 +101,11 @@ export default class index extends Component {
                                     <h3><b>Price <span style={{color:'red'}}>*</span></b></h3>
                                     <h4>Visible to your customer</h4>
                                     <input type="text" name="price" value={this.context.price} ref={(val) => this.price = val} className="form-control" required></input>
+                                </div>
+                                <div className="col">
+                                    <h3><b>Qty. <span style={{color:'red'}}>*</span></b></h3>
+                                    <h4>How many items do you have?</h4>
+                                    <input type="number" name="qty" value={this.context.qty} ref={(val) => this.qty = val} className="form-control" required></input>
                                 </div>
                             </div>
                             <div className="row mt-4 photo-product">

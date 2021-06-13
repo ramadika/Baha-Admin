@@ -23,6 +23,12 @@
   font-size: 10pt;
 }
 
+.form-product input::-webkit-outer-spin-button,
+.form-product input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .form-product .row a {
   padding: 10px;
   padding-left: 20px;
