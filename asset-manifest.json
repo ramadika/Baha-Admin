@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/Baha-Admin/static/css/main.7ea1adaa.chunk.css",
+    "main.js": "/Baha-Admin/static/js/main.7820f438.chunk.js",
+    "main.js.map": "/Baha-Admin/static/js/main.7820f438.chunk.js.map",
+    "runtime-main.js": "/Baha-Admin/static/js/runtime-main.154c3029.js",
+    "runtime-main.js.map": "/Baha-Admin/static/js/runtime-main.154c3029.js.map",
+    "static/css/2.639c579c.chunk.css": "/Baha-Admin/static/css/2.639c579c.chunk.css",
+    "static/js/2.4888f8dd.chunk.js": "/Baha-Admin/static/js/2.4888f8dd.chunk.js",
+    "static/js/2.4888f8dd.chunk.js.map": "/Baha-Admin/static/js/2.4888f8dd.chunk.js.map",
+    "static/js/3.0783d64a.chunk.js": "/Baha-Admin/static/js/3.0783d64a.chunk.js",
+    "static/js/3.0783d64a.chunk.js.map": "/Baha-Admin/static/js/3.0783d64a.chunk.js.map",
+    "index.html": "/Baha-Admin/index.html",
+    "static/css/2.639c579c.chunk.css.map": "/Baha-Admin/static/css/2.639c579c.chunk.css.map",
+    "static/css/main.7ea1adaa.chunk.css.map": "/Baha-Admin/static/css/main.7ea1adaa.chunk.css.map",
+    "static/js/2.4888f8dd.chunk.js.LICENSE.txt": "/Baha-Admin/static/js/2.4888f8dd.chunk.js.LICENSE.txt",
+    "static/media/Arnawa-removebg-preview.4f536d44.png": "/Baha-Admin/static/media/Arnawa-removebg-preview.4f536d44.png",
+    "static/media/index.css": "/Baha-Admin/static/media/tarun-anand-giri-wXtszuirc64-unsplash.bc30de1f.jpg",
+    "static/media/brandon-erlinger-ford-2wSe9hhfpnM-unsplash-removebg-preview.dc1b4dda.png": "/Baha-Admin/static/media/brandon-erlinger-ford-2wSe9hhfpnM-unsplash-removebg-preview.dc1b4dda.png",
+    "static/media/emma-matthews-digital-content-production-UsQyOSvhTrw-unsplash.2a8e5793.jpg": "/Baha-Admin/static/media/emma-matthews-digital-content-production-UsQyOSvhTrw-unsplash.2a8e5793.jpg",
+    "static/media/he-s-her-lobster-nKK32qJheBY-unsplash.9a51ba99.jpg": "/Baha-Admin/static/media/he-s-her-lobster-nKK32qJheBY-unsplash.9a51ba99.jpg",
+    "static/media/maude-frederique-lavoie-EDSTj4kCUcw-unsplash.6881cf65.jpg": "/Baha-Admin/static/media/maude-frederique-lavoie-EDSTj4kCUcw-unsplash.6881cf65.jpg",
+    "static/media/meghan-schiereck-oDoysLHMd94-unsplash.a39072c1.jpg": "/Baha-Admin/static/media/meghan-schiereck-oDoysLHMd94-unsplash.a39072c1.jpg",
+    "static/media/nimble-made-2yJFGX0tB-U-unsplash.315f8fab.jpg": "/Baha-Admin/static/media/nimble-made-2yJFGX0tB-U-unsplash.315f8fab.jpg",
+    "static/media/pexels-andrea-piacquadio-972937.a13b18e1.jpg": "/Baha-Admin/static/media/pexels-andrea-piacquadio-972937.a13b18e1.jpg",
+    "static/media/rodney-gainous-u_lTaX-elxI-unsplash.bf47adc2.jpg": "/Baha-Admin/static/media/rodney-gainous-u_lTaX-elxI-unsplash.bf47adc2.jpg",
+    "static/media/stil-D4jRahaUaIc-unsplash.6b36ceb2.jpg": "/Baha-Admin/static/media/stil-D4jRahaUaIc-unsplash.6b36ceb2.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.154c3029.js",
+    "static/css/2.639c579c.chunk.css",
+    "static/js/2.4888f8dd.chunk.js",
+    "static/css/main.7ea1adaa.chunk.css",
+    "static/js/main.7820f438.chunk.js"
+  ]
+}
