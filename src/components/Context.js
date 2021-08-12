@@ -12,7 +12,7 @@ export class DataProvider extends Component {
     };
 
     fetchData = () => {
-        fetch('http://localhost/BE-Baha/view_order.php')
+        fetch('http://localhost/BE-Baha/overview_order.php')
         .then(response => {
             response.json().then(function(data) {
                 if(data.success === 1){

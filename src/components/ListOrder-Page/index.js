@@ -15,18 +15,43 @@ export default class index extends Component {
     constructor(){
         super();
         this.state = {
-            message: '',
-            referrer: false,
+            result: [],
         };
     }
 
+    fetchData = () => {
+        fetch('http://localhost/BE-Baha/view_order.php')
+        .then(response => {
+            response.json().then(function (data) {
+                if (data.success === 1){
+                    this.setState({
+                        result: data.result
+                    })
+                }
+                else {
+                    console.log(data.message);
+                }
+            }.bind(this));
+        })
+        .catch(error => {
+            console.error(error);
+        })
+    }
+
     componentDidMount(){
+        this.fetchData();
+        setInterval(this.fetchData, 1000);
+    }
+
+    componentDidUpdate() {
         $(document).ready(function () {
             $('#example').DataTable();
         });
     }
 
     render() {
+        const { result } = this.state;
+
         return (
             <div className="orderlist">
                 <div className="container">
@@ -44,36 +69,16 @@ export default class index extends Component {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th>OD-123</th>
-                                        <td>2000 IDR</td>
-                                        <td>Confirmed</td>
-                                        <td><NavLink className="btn btn-outline-info" to="/dOrder">Detail</NavLink></td>
-                                    </tr>
-                                    <tr>
-                                        <th>OD-456</th>
-                                        <td>21000 IDR</td>
-                                        <td>Cancel</td>
-                                        <td><NavLink className="btn btn-outline-info" to="/dOrder">Detail</NavLink></td>
-                                    </tr>
-                                    <tr>
-                                        <th>OD-126</th>
-                                        <td>20000 IDR</td>
-                                        <td>Confirmed</td>
-                                        <td><NavLink className="btn btn-outline-info" to="/dOrder">Detail</NavLink></td>
-                                    </tr>
-                                    <tr>
-                                        <th>OD-153</th>
-                                        <td>500 IDR</td>
-                                        <td>Pending</td>
-                                        <td><NavLink className="btn btn-outline-info" to="/dOrder">Detail</NavLink></td>
-                                    </tr>
-                                    <tr>
-                                        <th>OD-623</th>
-                                        <td>5500 IDR</td>
-                                        <td>Cancel</td>
-                                        <td><NavLink className="btn btn-outline-info" to="/dOrder">Detail</NavLink></td>
-                                    </tr>
+                                    {
+                                        result.map((item) => (
+                                            <tr key={item.transaction_id}>
+                                                <th>{item.transaction_id}</th>
+                                                <td>{item.price} IDR</td>
+                                                <td>{item.status_name}</td>
+                                                <td><NavLink className="btn btn-outline-info" to="/dOrder">Detail</NavLink></td>
+                                            </tr>
+                                        ))
+                                    }
                                 </tbody>
                             </table>
                         </div>

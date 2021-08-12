@@ -79,7 +79,7 @@ export default class index extends Component {
                                     <tbody>
                                         {
                                             this.context.result.map((item) => (
-                                                <tr>
+                                                <tr key={item.transaction_id}>
                                                     <td className="text-center">{this.context.fetchStatus(item.status_name)}</td>
                                                     <td>{item.name}</td>
                                                     <td>{item.qty}</td>
