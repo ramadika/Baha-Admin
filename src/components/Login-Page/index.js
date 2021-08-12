@@ -21,7 +21,7 @@ export default class index extends Component {
     postData = (event) => {
         event.preventDefault();
         event.persist();
-        Axios.post('http://localhost/BE-Baha/user_login.php', {
+        Axios.post('http://localhost/BE-Baha/admin_login.php', {
             username: this.username.value,
             password: this.password.value,
         })
