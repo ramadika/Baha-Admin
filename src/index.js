@@ -29,6 +29,7 @@ import AdminList from 'components/ListAdmin-Page'
 import AdminDetail from 'components/DetailAdmin-Page'
 import About from 'components/About-Page'
 import Contact from 'components/Contact-Page'
+import CEdit from 'components/Contact-Page/CEdit-Page'
 
 ReactDOM.render(
   <Router>
@@ -53,6 +54,7 @@ ReactDOM.render(
             <Route path="/dAdmin" component={AdminDetail} />
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
+            <Route path="/eContact" component={CEdit} />
           </BaseLayout>
       </Switch>
     </DataProvider>
