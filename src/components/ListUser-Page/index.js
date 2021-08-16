@@ -15,18 +15,43 @@ export default class index extends Component {
     constructor(){
         super();
         this.state = {
-            message: '',
-            referrer: false,
+            result: [],
         };
     }
 
+    fetchData = () => {
+        fetch('http://localhost/BE-Baha/view_user.php')
+        .then(response => {
+            response.json().then(function (data) {
+                if (data.success === 1){
+                    this.setState({
+                        result: data.result
+                    })
+                }
+                else {
+                    console.log(data.message);
+                }
+            }.bind(this));
+        })
+        .catch(error => {
+            console.error(error);
+        })
+    }
+
     componentDidMount(){
+        this.fetchData();
+        setInterval(this.fetchData, 1000);
+    }
+
+    componentDidUpdate() {
         $(document).ready(function () {
             $('#example').DataTable();
         });
     }
 
     render() {
+        const { result } = this.state;
+
         return (
             <div className="userlist">
                 <div className="container">
@@ -45,41 +70,17 @@ export default class index extends Component {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th>1D-123</th>
-                                        <td>Hendra</td>
-                                        <td>Padjajaran, Bandung</td>
-                                        <td>+021 345 67</td>
-                                        <td><NavLink className="btn btn-outline-info" to="/dUser">History</NavLink></td>
-                                    </tr>
-                                    <tr>
-                                        <th>1D-124</th>
-                                        <td>Afred</td>
-                                        <td>Buah Batu, Bandung</td>
-                                        <td>+021 445 67</td>
-                                        <td><NavLink className="btn btn-outline-info" to="/dUser">History</NavLink></td>
-                                    </tr>
-                                    <tr>
-                                        <th>1D-143</th>
-                                        <td>Greg</td>
-                                        <td>Padjajaran, Bandung</td>
-                                        <td>+022 345 67</td>
-                                        <td><NavLink className="btn btn-outline-info" to="/dUser">History</NavLink></td>
-                                    </tr>
-                                    <tr>
-                                        <th>1D-153</th>
-                                        <td>Hendra</td>
-                                        <td>Mekar mukti, Cikarang</td>
-                                        <td>+023 345 67</td>
-                                        <td><NavLink className="btn btn-outline-info" to="/dUser">History</NavLink></td>
-                                    </tr>
-                                    <tr>
-                                        <th>1D-129</th>
-                                        <td>John</td>
-                                        <td>Sako, Palembang</td>
-                                        <td>+021 345 77</td>
-                                        <td><NavLink className="btn btn-outline-info" to="/dUser">History</NavLink></td>
-                                    </tr>
+                                    {
+                                        result.map((item) => (
+                                            <tr key={item.user_id}>
+                                                <th>{item.user_code}</th>
+                                                <td>{item.name}</td>
+                                                <td>{item.address}</td>
+                                                <td>{item.email}</td>
+                                                <td><NavLink className="btn btn-outline-info" to="/dUser">History</NavLink></td>
+                                            </tr>
+                                        ))
+                                    }
                                 </tbody>
                             </table>
                         </div>

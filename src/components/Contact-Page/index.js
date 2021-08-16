@@ -14,15 +14,58 @@ export default class index extends Component {
     constructor(){
         super();
         this.state = {
-            message: '',
-            referrer: false,
+            result: [],
         };
     }
 
+    fetchData = () => {
+        fetch('http://localhost/BE-Baha/view_company.php')
+        .then(response => {
+            response.json().then(function (data) {
+                if (data.success === 1){
+                    this.setState({
+                        result: data.result
+                    })
+                }
+                else {
+                    console.log(data.message);
+                }
+            }.bind(this));
+        })
+        .catch(error => {
+            console.error(error);
+        })
+    }
+
+    componentDidMount(){
+        this.fetchData();
+        setInterval(this.fetchData, 1000);
+    }
+
     render() {
+        const { result } = this.state;
+
         return (
             <div className="contact">
-                <div className="container text-center">
+                {
+                    result.map((item) => (
+                        <div key={item.company_id} className="container text-center">
+                            <Header title="Contact" tag="Your brands Contact Information" />
+                            <hr />
+                            <GoLocation className="icon-contact"></GoLocation>
+                            <h2>Our Office</h2>
+                            <h5>{item.address}</h5>
+                            <HiOutlineMailOpen className="icon-contact"></HiOutlineMailOpen>
+                            <h2>Mail</h2>
+                            <h5>{item.email}</h5>
+                            <IoIosCall className="icon-contact"></IoIosCall>
+                            <h2>Call Center</h2>
+                            <h5>{item.phone_number}</h5>
+                            <NavLink to="/eContact" className="btn btn-outline-info mt-4">Edit</NavLink>
+                        </div>
+                    ))
+                }
+                {/* <div className="container text-center">
                     <Header title="Contact" tag="Your brands Contact Information" />
                     <hr />
                     <GoLocation className="icon-contact"></GoLocation>
@@ -41,7 +84,7 @@ export default class index extends Component {
                         +621 789 567
                     </h5>
                     <NavLink to="/eContact" className="btn btn-outline-info mt-4">Edit</NavLink>
-                </div>
+                </div> */}
             </div>
         )
     }

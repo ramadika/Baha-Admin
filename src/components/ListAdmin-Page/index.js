@@ -14,18 +14,43 @@ export default class index extends Component {
     constructor(){
         super();
         this.state = {
-            message: '',
-            referrer: false,
+            result: [],
         };
     }
 
+    fetchData = () => {
+        fetch('http://localhost/BE-Baha/view_admin.php')
+        .then(response => {
+            response.json().then(function (data) {
+                if (data.success === 1){
+                    this.setState({
+                        result: data.result
+                    })
+                }
+                else {
+                    console.log(data.message);
+                }
+            }.bind(this));
+        })
+        .catch(error => {
+            console.error(error);
+        })
+    }
+
     componentDidMount(){
+        this.fetchData();
+        setInterval(this.fetchData, 1000);
+    }
+
+    componentDidUpdate() {
         $(document).ready(function () {
             $('#example').DataTable();
         });
     }
 
     render() {
+        const { result } = this.state;
+
         return (
             <div className="adminlist">
                 <div className="container">
@@ -43,36 +68,16 @@ export default class index extends Component {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th>AD-123</th>
-                                        <td>Dred</td>
-                                        <td>Owner</td>
-                                        <td>+021 445 67</td>
-                                    </tr>
-                                    <tr>
-                                        <th>AD-456</th>
-                                        <td>Ryot</td>
-                                        <td>Administrator</td>
-                                        <td>+021 445 67</td>
-                                    </tr>
-                                    <tr>
-                                        <th>AD-126</th>
-                                        <td>Buffy</td>
-                                        <td>Staff Purchasing</td>
-                                        <td>+021 445 67</td>
-                                    </tr>
-                                    <tr>
-                                        <th>AD-153</th>
-                                        <td>Vacx</td>
-                                        <td>Staff Finance</td>
-                                        <td>+021 445 67</td>
-                                    </tr>
-                                    <tr>
-                                        <th>AD-623</th>
-                                        <td>Luyt</td>
-                                        <td>Staff Production</td>
-                                        <td>+021 445 67</td>
-                                    </tr>
+                                    {
+                                        result.map((item) => (
+                                            <tr key={item.admin_id}>
+                                                <th>{item.admin_code}</th>
+                                                <td>{item.name}</td>
+                                                <td>{item.role_name}</td>
+                                                <td>{item.phone_number}</td>
+                                            </tr>
+                                        ))
+                                    }
                                 </tbody>
                             </table>
                         </div>

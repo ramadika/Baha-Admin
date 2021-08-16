@@ -11,25 +11,51 @@ export default class index extends Component {
     constructor(){
         super();
         this.state = {
-            message: '',
-            referrer: false,
+            result: [],
         };
     }
 
+    fetchData = () => {
+        fetch('http://localhost/BE-Baha/view_company.php')
+        .then(response => {
+            response.json().then(function (data) {
+                if (data.success === 1){
+                    this.setState({
+                        result: data.result
+                    })
+                }
+                else {
+                    console.log(data.message);
+                }
+            }.bind(this));
+        })
+        .catch(error => {
+            console.error(error);
+        })
+    }
+
+    componentDidMount(){
+        this.fetchData();
+        setInterval(this.fetchData, 1000);
+    }
+
     render() {
+        const { result } = this.state;
+
         return (
             <div className="about">
                 <div className="container">
                     <Header title="About" tag="Your brands Information that can be seen by anyone" />
                     <hr />
-                    <div className="row text-center mt-5 content-about">
-                        <h2>Because We Love What We Do.</h2>
-                        <h5>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </h5>
-                        <NavLink to="/eAbout" className="btn btn-outline-info mt-4">Edit</NavLink>
-                    </div>
+                    {
+                        result.map((item) => (
+                            <div key={item.company_id} className="row text-center mt-5 content-about">
+                                <h2>{item.tagline}</h2>
+                                <h5>{item.description}</h5>
+                                <NavLink to="/eAbout" className="btn btn-outline-info mt-4">Edit</NavLink>
+                            </div>
+                        ))
+                    }
                     <h4 className="text-center"><span><b>Our </b>Team Leads <b>.</b></span></h4>
                     <div className="row mb-3 justify-content-center">
                         <NavLink to="/men" className="col d-flex align-items-center justify-content-center teams-about" id="a-about">
