@@ -1,7 +1,7 @@
 // Dependencies
 import React, { Component } from 'react'
-// import Axios from 'axios';
-// import swal from "sweetalert";
+import Axios from 'axios';
+import swal from "sweetalert";
 // Internals
 import 'components/Contact-Page/CEdit-Page/index.css'
 import Header from 'components/Base-Layout/Header'
@@ -18,35 +18,38 @@ export default class index extends Component {
         };
     }
 
-    // postData = (event) => {
-    //     event.preventDefault();
-    //     event.persist();
-    //     Axios.post('http://localhost/BE-Baha/admin_login.php', {
-    //         address: this.address.value,
-    //         email: this.email.value,
-    //         phone_number: this.phone_number.value,
-    //     })
-    //     .then(function({data}) {
-    //         if(data.success === 1){
-    //             this.setState({
-    //                 message: data.message,
-    //                 referrer: true,
-    //             });
-    //             event.target.reset();
-    //         }
-    //         else {
-    //             this.setState({
-    //                 message: data.message,
-    //             });
-    //             swal(this.state.message, {
-    //                 icon: "error",
-    //             });
-    //         }
-    //     }.bind(this))
-    //     .catch(function (error) {
-    //         console.log(error);
-    //     });
-    // }
+    postData = (event) => {
+        event.preventDefault();
+        event.persist();
+        Axios.post('http://localhost/BE-Baha/edit_company.php', {
+            address: this.address.value,
+            email: this.email.value,
+            phone_number: this.phone_number.value,
+        })
+        .then(function({data}) {
+            if(data.success === 1){
+                this.setState({
+                    message: data.message,
+                    referrer: true,
+                });
+                swal(this.state.message, {
+                    icon: "success",
+                });
+                event.target.reset();
+            }
+            else {
+                this.setState({
+                    message: data.message,
+                });
+                swal(this.state.message, {
+                    icon: "error",
+                });
+            }
+        }.bind(this))
+        .catch(function (error) {
+            console.log(error);
+        });
+    }
 
     render() {
         const { address, email, phone_number } = this.state;
