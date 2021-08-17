@@ -52,7 +52,13 @@ export default class index extends Component {
                             <div key={item.company_id} className="row text-center mt-5 content-about">
                                 <h2>{item.tagline}</h2>
                                 <h5>{item.description}</h5>
-                                <NavLink to="/eAbout" className="btn btn-outline-info mt-4">Edit</NavLink>
+                                <NavLink to={{
+                                    pathname: '/eAbout',
+                                    aboutProps: {
+                                        tagline: item.tagline,
+                                        description: item.description
+                                    }
+                                }} className="btn btn-outline-info mt-4">Edit</NavLink>
                             </div>
                         ))
                     }

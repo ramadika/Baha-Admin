@@ -63,9 +63,9 @@ export default class index extends Component {
                             <NavLink to={{
                                 pathname: '/eContact',
                                 aboutProps: {
-                                    address: "Address",
-                                    mail: "mail@mail.com",
-                                    call: "5673813"
+                                    address: item.address,
+                                    mail: item.email,
+                                    call: item.phone_number
                                 }
                             }} className="btn btn-outline-info mt-4">Edit</NavLink>
                         </div>

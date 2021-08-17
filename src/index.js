@@ -28,6 +28,7 @@ import UserDetail from 'components/DetailUser-Page'
 import AdminList from 'components/ListAdmin-Page'
 import AdminDetail from 'components/DetailAdmin-Page'
 import About from 'components/About-Page'
+import AEdit from 'components/About-Page/AEdit-Page'
 import Contact from 'components/Contact-Page'
 import CEdit from 'components/Contact-Page/CEdit-Page'
 
@@ -53,6 +54,7 @@ ReactDOM.render(
             <Route path="/admin" component={AdminList} />
             <Route path="/dAdmin" component={AdminDetail} />
             <Route path="/about" component={About} />
+            <Route path="/eAbout" component={AEdit} />
             <Route path="/contact" component={Contact} />
             <Route path="/eContact" component={CEdit} />
           </BaseLayout>

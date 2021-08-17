@@ -21,7 +21,7 @@ export default class index extends Component {
     postData = (event) => {
         event.preventDefault();
         event.persist();
-        Axios.post('http://localhost/BE-Baha/edit_company.php', {
+        Axios.post('http://localhost/BE-Baha/edit_contact.php', {
             address: this.address.value,
             email: this.email.value,
             phone_number: this.phone_number.value,
@@ -30,12 +30,13 @@ export default class index extends Component {
             if(data.success === 1){
                 this.setState({
                     message: data.message,
-                    referrer: true,
+                    address: this.address.value,
+                    email: this.email.value,
+                    phone_number: this.phone_number.value,
                 });
                 swal(this.state.message, {
                     icon: "success",
                 });
-                event.target.reset();
             }
             else {
                 this.setState({
