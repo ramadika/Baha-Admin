@@ -68,7 +68,7 @@ export default class index extends Component {
                                 <textarea rows="5" className="form-control" id="exampleInputDesc1" aria-describedby="descHelp" placeholder="Enter Description" defaultValue={description} ref={(val) => this.description = val} required></textarea>
                                 <small id="descHelp" className="form-text text-muted">Tell the people who is you.</small>
                             </div>
-                                <input type="submit" value="Submit"  className="form-control my-5"></input>
+                            <input type="submit" value="Submit"  className="form-control my-5"></input>
                         </form>
                     </div>
                 </div>

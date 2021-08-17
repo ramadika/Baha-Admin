@@ -26,6 +26,9 @@ import OrderDetail from 'components/DetailOrder-Page'
 import UserList from 'components/ListUser-Page'
 import UserDetail from 'components/DetailUser-Page'
 import AdminList from 'components/ListAdmin-Page'
+import RoleList from 'components/ListAdmin-Page/ListRole-Page'
+import ARAdd from 'components/ListAdmin-Page/ARAdd-Page'
+import AMAdd from 'components/ListAdmin-Page/AMAdd-Page'
 import AdminDetail from 'components/DetailAdmin-Page'
 import About from 'components/About-Page'
 import AEdit from 'components/About-Page/AEdit-Page'
@@ -52,6 +55,9 @@ ReactDOM.render(
             <Route path="/user" component={UserList} />
             <Route path="/dUser" component={UserDetail} />
             <Route path="/admin" component={AdminList} />
+            <Route path="/role" component={RoleList} />
+            <Route path="/aRAdmin" component={ARAdd} />
+            <Route path="/aMAdmin" component={AMAdd} />
             <Route path="/dAdmin" component={AdminDetail} />
             <Route path="/about" component={About} />
             <Route path="/eAbout" component={AEdit} />

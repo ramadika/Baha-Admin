@@ -6,24 +6,22 @@ import "datatables.net-dt/css/jquery.dataTables.min.css"
 import $ from 'jquery'; 
 import { NavLink } from 'react-router-dom';
 // Internals
-import 'components/ListAdmin-Page/index.css'
+import 'components/ListAdmin-Page/ListRole-Page/index.css'
 import Header from 'components/Base-Layout/Header'
-import { DataContext } from 'components/Context'
 
 export default class index extends Component {
-    static contextType = DataContext;
     constructor(){
         super();
         this.state = {
             result: [],
-        };
+        }
     }
 
     fetchData = () => {
-        fetch('http://localhost/BE-Baha/view_admin.php')
+        fetch('http://localhost/BE-Baha/view_role.php')
         .then(response => {
             response.json().then(function (data) {
-                if (data.success === 1){
+                if (data.success === 1) {
                     this.setState({
                         result: data.result
                     })
@@ -33,12 +31,12 @@ export default class index extends Component {
                 }
             }.bind(this));
         })
-        .catch(error => {
-            console.error(error);
+        .catch(function (error) {
+            console.log(error);
         })
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.fetchData();
         setInterval(this.fetchData, 1000);
     }
@@ -53,15 +51,14 @@ export default class index extends Component {
         const { result } = this.state;
 
         return (
-            <div className="adminlist">
+            <div className="rolelist">
                 <div className="container">
                     <div className="row">
                         <div className="col">
-                            <Header title="Admin List" tag="A list of all your administrator and the roles they have." />
+                            <Header title="Role List" tag="A list of all your roles you have." />
                         </div>
                         <div className="col align-self-end d-flex justify-content-end">
-                            <NavLink to="/aMAdmin" className="btn btn-success">&#10010; Add new member</NavLink>
-                            <NavLink to="/role" className="btn btn-outline-success ml-3">&#128065; Role</NavLink>
+                            <NavLink to="/aRAdmin" className="btn btn-success">&#10010; Add new role</NavLink>
                         </div>
                     </div>
                     <hr />
@@ -70,20 +67,16 @@ export default class index extends Component {
                             <table id="example" className="table table-borderless">
                                 <thead>
                                     <tr>
-                                        <th>Admin ID</th>
-                                        <th>Name</th>
-                                        <th>Status</th>
-                                        <th>Contact</th>
+                                        <th>Role Name</th>
+                                        <th>Description</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {
                                         result.map((item) => (
-                                            <tr key={item.admin_id}>
-                                                <th>{item.admin_code}</th>
-                                                <td>{item.name}</td>
-                                                <td>{item.role_name}</td>
-                                                <td>{item.phone_number}</td>
+                                            <tr key={item.role_id}>
+                                                <th>{item.role_name}</th>
+                                                <td>{item.description}</td>
                                             </tr>
                                         ))
                                     }
