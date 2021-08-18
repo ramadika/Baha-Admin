@@ -3,7 +3,8 @@
   margin-top: 75px;
 }
 
-.amadd .form-control {
+.amadd .form-control,
+.amadd .form-select {
   width: 500px;
   padding: 18px 18px;
   border-radius: 10px 10px 10px 10px;
@@ -11,6 +12,12 @@
   -webkit-border-radius: 10px 10px 10px 10px;
   border: 0.5px solid #dcdde1;
   font-size: 10pt;
+}
+
+.amadd input::-webkit-outer-spin-button,
+.amadd input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .amadd input[type="submit"] {

@@ -78,7 +78,7 @@ export default class index extends Component {
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="exampleInputCall1"><b>Call Center <span style={{color:'red'}}>*</span></b></label>
-                                    <input type="text" className="form-control" id="exampleInputCall1" aria-describedby="callHelp" placeholder="Enter Address" defaultValue={phone_number} ref={(val) => this.phone_number = val} required></input>
+                                    <input type="number" className="form-control" id="exampleInputCall1" aria-describedby="callHelp" placeholder="Enter Address" defaultValue={phone_number} ref={(val) => this.phone_number = val} required></input>
                                     <small id="callHelp" className="form-text text-muted">Someone will call you through this number.</small>
                                 </div>
                                 <input type="submit" value="Submit"  className="form-control my-5"></input>

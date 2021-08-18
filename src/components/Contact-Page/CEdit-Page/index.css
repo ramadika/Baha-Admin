@@ -23,6 +23,12 @@
   font-size: 10pt;
 }
 
+.cedit input::-webkit-outer-spin-button,
+.cedit input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .cedit input[type="submit"] {
   padding: 10px;
   padding-left: 20px;
