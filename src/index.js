@@ -53,7 +53,7 @@ ReactDOM.render(
           <Route path="/order" component={OrderList} />
           <Route path="/dOrder/:id" component={OrderDetail} />
           <Route path="/user" component={UserList} />
-          <Route path="/dUser" component={UserDetail} />
+          <Route path="/dUser/:id" component={UserDetail} />
           <Route path="/admin" component={AdminList} />
           <Route path="/role" component={RoleList} />
           <Route path="/aRAdmin" component={ARAdd} />

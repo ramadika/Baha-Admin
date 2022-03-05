@@ -15,8 +15,8 @@ class ComponentToPrint extends Component {
         <div className="row mt-4 mb-3 justify-content-center">
           <div className="d-flex align-items-center">
             <div className="mr-4">
-              {this.context.orderHeader.map((header) => (
-                <h3>{header}</h3>
+              {this.context.orderHeader.map((header, index) => (
+                <h3 key={index}>{header}</h3>
               ))}
             </div>
             {result.map((item) => (

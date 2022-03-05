@@ -17,6 +17,7 @@ export class DataProvider extends Component {
       "Postal Code",
       "Phone Number",
     ],
+    userHeader: ["User ID", "Name", "Address", "Contact"],
   };
 
   fetchData = () => {
@@ -61,6 +62,7 @@ export class DataProvider extends Component {
       result: this.state.result,
       total: this.state.total,
       orderHeader: this.state.orderHeader,
+      userHeader: this.state.userHeader,
       fetchStatus: this.fetchStatus,
     };
 
