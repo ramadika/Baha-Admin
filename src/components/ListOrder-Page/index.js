@@ -6,6 +6,8 @@ import "datatables.net-dt/js/dataTables.dataTables";
 import "datatables.net-dt/css/jquery.dataTables.min.css";
 import $ from "jquery";
 import Header from "components/Base-Layout/Header";
+import swal from "sweetalert";
+import Axios from "axios";
 // Internals
 import "components/ListOrder-Page/index.css";
 import { DataContext } from "components/Context";
@@ -50,6 +52,80 @@ export default class index extends Component {
     });
   }
 
+  postData = (id, status) => {
+    Axios.post("http://localhost/BE-Baha/update_status.php", {
+      transaction_id: id,
+      status_id: status,
+    })
+      .then(function ({ data }) {
+        if (data.success === 1) {
+          swal(data.message, {
+            icon: "success",
+          });
+        } else {
+          swal(data.message, {
+            icon: "error",
+          });
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
+
+  onConfirm(id, value) {
+    if (value === "confirmed") {
+      return swal({
+        title: "Are you sure?",
+        text: "Once confirmed, you will not be able to recover this order!",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      }).then((willAction) => {
+        if (willAction) {
+          this.postData(id, 2);
+        } else {
+          swal("Your order hasn't been changed yet!");
+        }
+      });
+    }
+    return swal({
+      title: "Are you sure?",
+      text: "Once canceled, you will not be able to recover this order!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    }).then((willAction) => {
+      if (willAction) {
+        this.postData(id, 3);
+      } else {
+        swal("Your order hasn't been changed yet!");
+      }
+    });
+  }
+
+  renderUpdateButton(id, value) {
+    if (value === "Waiting for payment") {
+      return (
+        <td className="d-flex justify-content-center">
+          <button
+            className="btn btn-outline-success mr-2"
+            onClick={() => this.onConfirm(id, "confirmed")}
+          >
+            &#10004; Confirmed
+          </button>
+          <button
+            className="btn btn-outline-danger"
+            onClick={() => this.onConfirm(id, "canceled")}
+          >
+            &#10006; Canceled
+          </button>
+        </td>
+      );
+    }
+    return <td className="d-flex justify-content-center">{value}</td>;
+  }
+
   render() {
     const { result } = this.state;
 
@@ -65,7 +141,6 @@ export default class index extends Component {
                   <tr>
                     <th>Order ID</th>
                     <th>Price</th>
-                    <th>Status</th>
                     <th>Detail</th>
                     <th>Update Status</th>
                   </tr>
@@ -75,7 +150,6 @@ export default class index extends Component {
                     <tr key={item.transaction_id}>
                       <th>{item.transaction_id}</th>
                       <td>{item.price} IDR</td>
-                      <td>{item.status_name}</td>
                       <td>
                         <NavLink
                           className="btn btn-outline-info"
@@ -84,14 +158,10 @@ export default class index extends Component {
                           Detail
                         </NavLink>
                       </td>
-                      <td>
-                        <NavLink
-                          className="btn btn-outline-success"
-                          to={`/sOrder/${item.transaction_id}`}
-                        >
-                          Update Status
-                        </NavLink>
-                      </td>
+                      {this.renderUpdateButton(
+                        item.transaction_id,
+                        item.status_name
+                      )}
                     </tr>
                   ))}
                 </tbody>

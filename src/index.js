@@ -23,7 +23,6 @@ import AccessoriesDetail from "components/Product-Page/DetailAccessories-Page";
 import AddProduct from "components/Product-Page/Form-Page";
 import OrderList from "components/ListOrder-Page";
 import OrderDetail from "components/DetailOrder-Page";
-import UpdateStatusOrder from "components/UpdateStatusOrder-Page";
 import UserList from "components/ListUser-Page";
 import UserDetail from "components/DetailUser-Page";
 import AdminList from "components/ListAdmin-Page";
@@ -53,7 +52,6 @@ ReactDOM.render(
           <Route path="/addproduct" component={AddProduct} />
           <Route path="/order" component={OrderList} />
           <Route path="/dOrder/:id" component={OrderDetail} />
-          <Route path="/sOrder/:id" component={UpdateStatusOrder} />
           <Route path="/user" component={UserList} />
           <Route path="/dUser" component={UserDetail} />
           <Route path="/admin" component={AdminList} />
