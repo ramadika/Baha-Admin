@@ -10,12 +10,14 @@ class ComponentToPrint extends Component {
   static contextType = DataContext;
   render() {
     const { result } = this.props;
+    const { orderHeader } = this.context;
+
     return (
       <div className="container">
         <div className="row mt-4 mb-3 justify-content-center">
           <div className="d-flex align-items-center">
             <div className="mr-4">
-              {this.context.orderHeader.map((header, index) => (
+              {orderHeader.map((header, index) => (
                 <h3 key={index}>{header}</h3>
               ))}
             </div>
@@ -24,42 +26,42 @@ class ComponentToPrint extends Component {
                 {item.transaction_id ? (
                   <h4>{item.transaction_id}</h4>
                 ) : (
-                  <h4 className="orderDetail-value-null">NULL</h4>
+                  <h4 className="null-value">NULL</h4>
                 )}
                 {item.status_name ? (
                   <h4>{item.status_name}</h4>
                 ) : (
-                  <h4 className="orderDetail-value-null">NULL</h4>
+                  <h4 className="null-value">NULL</h4>
                 )}
                 {item.method ? (
                   <h4>{item.method}</h4>
                 ) : (
-                  <h4 className="orderDetail-value-null">NULL</h4>
+                  <h4 className="null-value">NULL</h4>
                 )}
                 {item.name ? (
                   <h4>{item.name}</h4>
                 ) : (
-                  <h4 className="orderDetail-value-null">NULL</h4>
+                  <h4 className="null-value">NULL</h4>
                 )}
                 {item.address ? (
                   <h4>{item.address}</h4>
                 ) : (
-                  <h4 className="orderDetail-value-null">NULL</h4>
+                  <h4 className="null-value">NULL</h4>
                 )}
                 {item.city ? (
                   <h4>{item.city}</h4>
                 ) : (
-                  <h4 className="orderDetail-value-null">NULL</h4>
+                  <h4 className="null-value">NULL</h4>
                 )}
                 {item.postal_code ? (
                   <h4>{item.postal_code}</h4>
                 ) : (
-                  <h4 className="orderDetail-value-null">NULL</h4>
+                  <h4 className="null-value">NULL</h4>
                 )}
                 {item.phone_number ? (
                   <h4>{item.phone_number}</h4>
                 ) : (
-                  <h4 className="orderDetail-value-null">NULL</h4>
+                  <h4 className="null-value">NULL</h4>
                 )}
               </div>
             ))}

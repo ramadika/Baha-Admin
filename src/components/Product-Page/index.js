@@ -3,12 +3,11 @@ import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import { BiGridSmall } from 'react-icons/bi'
 import { HiDuplicate } from 'react-icons/hi'
-import { FaRegMoneyBillAlt, FaTshirt } from 'react-icons/fa'
-import { ImWoman } from 'react-icons/im'
-import { GoWatch } from 'react-icons/go'
+import { FaRegMoneyBillAlt } from 'react-icons/fa'
 import Header from 'components/Base-Layout/Header'
 // Internals
 import 'components/Product-Page/index.css'
+import ProductList from 'components/Product-Page/ListProduct-Page'
 
 export default class index extends Component {
     render() {
@@ -34,25 +33,11 @@ export default class index extends Component {
                             <h5>5</h5>
                         </div>
                     </div>
-                    <h2 className="text-center">Update Product</h2>
-                    <div className="row mt-3 mb-5 justify-content-center">
-                        <NavLink to="/men" className="col-6 col-sm-4 d-flex align-items-center justify-content-center category-product" id="d-product">
-                            <FaTshirt size={25} className="mb-2 mr-2" />
-                            <h3>Men</h3>
-                        </NavLink>
-                        <NavLink to="/women" className="col-6 col-sm-4 d-flex align-items-center justify-content-center category-product" id="e-product">
-                            <ImWoman size={30} className="mb-2 mr-2" />
-                            <h3>Women</h3>
-                        </NavLink>
-                        <NavLink to="/accessories" className="col-6 col-sm-4 d-flex align-items-center justify-content-center category-product" id="f-product">
-                            <GoWatch size={25} className="mb-2 mr-2" />
-                            <h3>Accessories</h3>
-                        </NavLink>
-                    </div>
                     <div className="addbtn-product d-flex justify-content-center">
                         <NavLink to="/addproduct">+</NavLink>
                     </div>
                 </div>
+                <ProductList />
             </div>
         )
     }

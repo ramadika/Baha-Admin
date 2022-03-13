@@ -18,6 +18,14 @@ export class DataProvider extends Component {
       "Phone Number",
     ],
     userHeader: ["User ID", "Name", "Address", "Contact"],
+    productDetailHeader: [
+      "Product ID",
+      "Name",
+      "Category",
+      "Qty.",
+      "Price",
+      "Color",
+    ],
   };
 
   fetchData = () => {
@@ -63,6 +71,7 @@ export class DataProvider extends Component {
       total: this.state.total,
       orderHeader: this.state.orderHeader,
       userHeader: this.state.userHeader,
+      productDetailHeader: this.state.productDetailHeader,
       fetchStatus: this.fetchStatus,
     };
 

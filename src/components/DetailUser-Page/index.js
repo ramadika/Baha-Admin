@@ -43,6 +43,8 @@ export default class index extends Component {
 
   render() {
     const { result } = this.state;
+    const { userHeader } = this.context;
+
     return (
       <div className="userDetail">
         <div className="container">
@@ -54,7 +56,7 @@ export default class index extends Component {
           <div className="row mt-4 mb-3 justify-content-center">
             <div className="d-flex align-items-center">
               <div className="mr-4">
-                {this.context.userHeader.map((header, index) => (
+                {userHeader.map((header, index) => (
                   <h3 key={index}>{header}</h3>
                 ))}
               </div>
