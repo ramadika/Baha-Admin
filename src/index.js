@@ -15,7 +15,8 @@ import BaseLayout from "components/Base-Layout";
 import Home from "components/Home-Page";
 import Product from "components/Product-Page";
 import ProductDetail from "components/Product-Page/DetailProduct-Page";
-import AddProduct from "components/Product-Page/Form-Page";
+import AddProduct from "components/Product-Page/AddProduct-Page";
+import EditProduct from "components/Product-Page/EditProduct-Page";
 import OrderList from "components/ListOrder-Page";
 import OrderDetail from "components/DetailOrder-Page";
 import UserList from "components/ListUser-Page";
@@ -40,6 +41,7 @@ ReactDOM.render(
           <Route path="/product" component={Product} />
           <Route path="/dProduct/:id" component={ProductDetail} />
           <Route path="/addproduct" component={AddProduct} />
+          <Route path="/editproduct/:id" component={EditProduct} />
           <Route path="/order" component={OrderList} />
           <Route path="/dOrder/:id" component={OrderDetail} />
           <Route path="/user" component={UserList} />

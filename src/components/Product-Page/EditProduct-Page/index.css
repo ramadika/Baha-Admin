@@ -1,0 +1,90 @@
+.formEdit-product {
+  font-family: "Poppins", sans-serif;
+  margin-top: 75px;
+}
+
+.formEdit-product .row h3 {
+  font-size: 10pt;
+  margin-top: 15px;
+  color: #343a40;
+}
+
+.formEdit-product .row h4 {
+  font-size: 6pt;
+  color: #343a40;
+}
+
+.formEdit-product .form-control {
+  padding: 18px 18px;
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 0.5px solid #dcdde1;
+  font-size: 10pt;
+}
+
+.formEdit-product input::-webkit-outer-spin-button,
+.formEdit-product input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.formEdit-product .row a {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: fit-content;
+  height: fit-content;
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 10pt;
+  color: #343a40;
+  border: 1px solid #343a40;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px grey;
+}
+
+.formEdit-product .row a:hover {
+  background-image: linear-gradient(rgb(199, 72, 72), rgb(214, 79, 79)),
+    url(/src/assets/images/clark-street-mercantile-P3pI6xzovu0-unsplash-cropped.jpg);
+  background-repeat: no-repeat;
+  background-size: 220%;
+  background-position: 10% 50%;
+  background-blend-mode: multiply;
+  color: #dcdde1;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.formEdit-product .row input[type="submit"] {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: fit-content;
+  height: fit-content;
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 10pt;
+  color: #343a40;
+  border: 0px solid #dcdde1;
+  background: linear-gradient(#343a40, #1a1f27);
+  color: #dcdde1;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px grey;
+}
+
+.formEdit-product .row input:hover[type="submit"]:hover {
+  background-image: linear-gradient(grey, grey),
+    url(/src/assets/images/jezael-melgoza-cv3T6MG36DE-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: 220%;
+  background-position: 10% 50%;
+  background-blend-mode: multiply;
+  color: #dcdde1;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.formEdit-product .row .photo-product {
+  border: 1px solid #343a40;
+}

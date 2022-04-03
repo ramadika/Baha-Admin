@@ -79,20 +79,32 @@ export default class index extends Component {
                   ) : (
                     <h4 className="null-value">NULL</h4>
                   )}
-                  {item.stock ? <h4>{item.stock}</h4> : <h4 className="null-value">NULL</h4>}
-                  {item.price ? <h4>{item.price}</h4> : <h4 className="null-value">NULL</h4>}
-                  {item.color ? <h4>{item.color}</h4> : <h4 className="null-value">NULL</h4>}
+                  {item.stock ? (
+                    <h4>{item.stock}</h4>
+                  ) : (
+                    <h4 className="null-value">NULL</h4>
+                  )}
+                  {item.price ? (
+                    <h4>{item.price}</h4>
+                  ) : (
+                    <h4 className="null-value">NULL</h4>
+                  )}
+                  {item.color ? (
+                    <h4>{item.color}</h4>
+                  ) : (
+                    <h4 className="null-value">NULL</h4>
+                  )}
                 </div>
               ))}
             </div>
           </div>
           <div className="row justify-content-center">
-            <button
-              onClick={() => this.goBack()}
-              className="btn btn-outline-danger mb-3"
+            <NavLink
+              className="btn btn-outline-danger mb-3 align-self-center"
+              to="/product"
             >
               Go Back
-            </button>
+            </NavLink>
           </div>
           <div className="row">
             <div className="table-responsive text-center mb-5">
@@ -114,7 +126,19 @@ export default class index extends Component {
                       <td>
                         <NavLink
                           className="btn btn-outline-info"
-                          to={`/eMen/${item.product_id}`}
+                          // to={`/editproduct/${item.product_id}`}
+                          to={{
+                            pathname: `/editproduct/${item.product_id}`,
+                            editProps: {
+                              product_id: item.product_id,
+                              product_code: item.product_code,
+                              product_name: item.product_name,
+                              category_name: item.category_name,
+                              stock: item.stock,
+                              price: item.price,
+                              color: item.color,
+                            },
+                          }}
                         >
                           Edit
                         </NavLink>
